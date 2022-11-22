@@ -1,2 +1,2 @@
-# book_library_api
+# The Book Library API
 This API provides information about books.
