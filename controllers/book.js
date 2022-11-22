@@ -1,5 +1,3 @@
-
-
 exports.getBooks = (req, res, next) => {
   res.status(200).json({
     books: [
@@ -10,4 +8,17 @@ exports.getBooks = (req, res, next) => {
       {title: 'book05', author: 'autor05'}
     ]
   });
+};
+
+exports.postBook = (req, res, next) => {
+  const title = req.body.title;
+  const author = req.body.author;
+  res.status(201).json({
+    message: 'Book successfully created',
+    data: {
+      id: new Date().toISOString(),
+      title: title,
+      author: author
+    }
+  })
 };
